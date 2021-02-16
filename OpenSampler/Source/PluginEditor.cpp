@@ -22,11 +22,6 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     //addAndMakeVisible(mLoadButton);
     
     setSize (1200, 800); // Plugin window size
-    slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
-    slider.setRange(0.1f, 10.0f);
-    slider.setValue(0.1f);
-    slider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 20.0, 10.0);
-    addAndMakeVisible(&slider);
     
     mainView.setBounds(5, 70, 1190, 665);
     addAndMakeVisible(mainView);
@@ -123,7 +118,6 @@ void OpenSamplerAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
     mLoadButton.setBounds(getWidth() / 2 - 50, getHeight() / 2 - 50, 100, 100);
-    slider.setBounds(200, 200, 100, 300);
     
 }
 

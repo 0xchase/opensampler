@@ -22,6 +22,14 @@ MainView::MainView() :  keyboardComponent (keyboardState, juce::MidiKeyboardComp
     keyboardComponent.setBounds(100, 700, 800, 60);
     addAndMakeVisible (keyboardComponent);
     keyboardState.addListener (this);
+    
+    slider.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
+    slider.setRange(0.1f, 10.0f);
+    slider.setValue(0.1f);
+    slider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 20.0, 10.0);
+    slider.setBounds(200, 200, 100, 300);
+
+    addAndMakeVisible(&slider);
 
 }
 

@@ -28,6 +28,8 @@ public:
 
 private:
     
+    juce::Slider slider;
+    
     juce::AudioDeviceManager deviceManager;           // [1]
     juce::ComboBox midiInputList;                     // [2]
     juce::Label midiInputListLabel;

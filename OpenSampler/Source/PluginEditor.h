@@ -46,7 +46,6 @@ public:
 private:
     juce::TextButton mLoadButton { "Load" };
     
-    juce::Slider slider;
     std::vector<juce::TextButton *> buttons;
     
     // This reference is provided as a quick way for your editor to
