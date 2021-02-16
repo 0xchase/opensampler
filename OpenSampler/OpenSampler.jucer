@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="Kuv9Zt" name="OpenSampler" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
+  <MAINGROUP id="OhkrRd" name="OpenSampler">
+    <GROUP id="{60F98CA1-7E45-3C67-5D0F-FD37CDD006B8}" name="Source">
+      <FILE id="ypw6DJ" name="MainView.cpp" compile="1" resource="0" file="Source/MainView.cpp"/>
+      <FILE id="vBrfOj" name="MainView.h" compile="0" resource="0" file="Source/MainView.h"/>
+      <FILE id="aC3uUr" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="xKutsy" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="YkjUEc" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="e0ogVo" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="za7FeH" name="TopBar.cpp" compile="1" resource="0" file="Source/TopBar.cpp"/>
+      <FILE id="RPHTEg" name="TopBar.h" compile="0" resource="0" file="Source/TopBar.h"/>
+      <FILE id="wKMXDC" name="BottomBar.cpp" compile="1" resource="0" file="Source/BottomBar.cpp"/>
+      <FILE id="nXD7YX" name="BottomBar.h" compile="0" resource="0" file="Source/BottomBar.h"/>
+    </GROUP>
+    <FILE id="mxiJIV" name="script.png" compile="0" resource="1" file="../images/script.png"/>
+    <FILE id="wLZoJQ" name="midi.png" compile="0" resource="1" file="../images/midi.png"/>
+    <FILE id="zn4tdE" name="files.png" compile="0" resource="1" file="../images/files.png"/>
+    <FILE id="tVMdrS" name="piano.png" compile="0" resource="1" file="../images/piano.png"/>
+    <FILE id="AZsibE" name="internet.png" compile="0" resource="1" file="../images/internet.png"/>
+    <FILE id="pmXHMu" name="list.png" compile="0" resource="1" file="../images/list.png"/>
+    <FILE id="dK7D8u" name="lock.png" compile="0" resource="1" file="../images/lock.png"/>
+    <FILE id="RMCoUi" name="waveform.png" compile="0" resource="1" file="../images/waveform.png"/>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="OpenSampler"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="OpenSampler"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
