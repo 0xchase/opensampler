@@ -29,7 +29,7 @@ MainView::~MainView()
 {
     
 }
-
+//test
 void MainView::paint (juce::Graphics& g)
 {
     /* This demo code just fills the component's background and
