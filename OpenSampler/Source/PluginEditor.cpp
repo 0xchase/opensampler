@@ -28,21 +28,48 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     slider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 20.0, 10.0);
     addAndMakeVisible(&slider);
     
-    //createButton(100, 100, 100, 100);
-    
-    //keyboardComponent.setBounds(100, 700, 800, 60);
-    
-    //addAndMakeVisible (keyboardComponent);
-    //keyboardState.addListener (this);
-    
-    mainView.setBounds(260, 70, 930, 660);
+    mainView.setBounds(5, 70, 1190, 665);
     addAndMakeVisible(mainView);
+    mainView.setVisible(true);
     
-    topBar.setBounds(10, 10, 1180, 50);
+    modularView.setBounds(5, 70, 1190, 665);
+    addAndMakeVisible(modularView);
+    modularView.setVisible(false);
+    
+    samplerView.setBounds(5, 70, 1190, 665);
+    addAndMakeVisible(samplerView);
+    samplerView.setVisible(false);
+    
+    topBar.setBounds(5, 5, 1190, 60);
     addAndMakeVisible(topBar);
     
-    bottomBar.setBounds(10, 740, 1180, 50);
+    bottomBar.setBounds(5, 740, 1190, 55);
     addAndMakeVisible(bottomBar);
+    
+    bottomBar.mainViewButton.addListener(this);
+    bottomBar.modularViewButton.addListener(this);
+    bottomBar.samplerViewButton.addListener(this);
+    
+}
+
+void OpenSamplerAudioProcessorEditor::buttonClicked (juce::Button* button)
+{
+    mainView.setVisible(false);
+    modularView.setVisible(false);
+    samplerView.setVisible(false);
+    
+    if (button == &bottomBar.mainViewButton) {
+        mainView.setVisible(true);
+    } else if (button == &bottomBar.modularViewButton) {
+        modularView.setVisible(true);
+    }else if (button == &bottomBar.samplerViewButton) {
+        samplerView.setVisible(true);
+    }
+}
+
+void OpenSamplerAudioProcessorEditor::tabClicked(Button* buttonThatWasClicked)
+{
+    
 }
 
 void OpenSamplerAudioProcessorEditor::createButton(int x, int y, int width, int height) {

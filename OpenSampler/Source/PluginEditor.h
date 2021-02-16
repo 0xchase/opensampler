@@ -12,6 +12,9 @@
 #include "PluginProcessor.h"
 
 #include "MainView.h"
+#include "ModularView.h"
+#include "SamplerView.h"
+
 #include "TopBar.h"
 #include "BottomBar.h"
 
@@ -22,8 +25,8 @@ using namespace juce;
 */
 
 class OpenSamplerAudioProcessorEditor  :   public juce::AudioProcessorEditor,
-                                            public juce::FileDragAndDropTarget
-
+                                            public juce::FileDragAndDropTarget,
+                                            public juce::Button::Listener
 {
 public:
     OpenSamplerAudioProcessorEditor (OpenSamplerAudioProcessor&);
@@ -37,6 +40,8 @@ public:
     void filesDropped (const juce::StringArray& files, int x, int y) override;
     
     void createButton(int x, int y, int width, int height);
+    
+    void buttonClicked (juce::Button* button) override;
 
 private:
     juce::TextButton mLoadButton { "Load" };
@@ -51,8 +56,13 @@ private:
     //==============================================================================
     
     MainView mainView;
+    ModularView modularView;
+    SamplerView samplerView;
+    
     BottomBar bottomBar;
     TopBar topBar;
+    
+    void tabClicked(Button* buttonThatWasClicked);
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (OpenSamplerAudioProcessorEditor)
 };

@@ -21,11 +21,9 @@ BottomBar::BottomBar()
     
     setSize(1180, 50);
     
-    initPresetView();
-    initMainView();
-    initMidiEffectsView();
-    initSamplerView();
-    initAudioEffectsView();
+    initMainViewButton();
+    initModularViewButton();
+    initSamplerViewButton();
 }
 
 BottomBar::~BottomBar()
