@@ -21,9 +21,10 @@ BottomBar::BottomBar()
     
     setSize(1180, 50);
     
+    initBrowserViewButton();
     initMainViewButton();
     initModularViewButton();
-    initSamplerViewButton();
+    initUtilitiesViewButton();
 }
 
 BottomBar::~BottomBar()

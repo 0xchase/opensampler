@@ -11,9 +11,10 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
+#include "BrowserView.h"
 #include "MainView.h"
 #include "ModularView.h"
-#include "SamplerView.h"
+#include "UtilitiesView.h"
 
 #include "TopBar.h"
 #include "BottomBar.h"
@@ -54,9 +55,10 @@ private:
     
     //==============================================================================
     
+    BrowserView browserView;
     MainView mainView;
     ModularView modularView;
-    SamplerView samplerView;
+    UtilitiesView utilitiesView;
     
     BottomBar bottomBar;
     TopBar topBar;

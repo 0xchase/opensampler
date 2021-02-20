@@ -8,6 +8,12 @@
 
 namespace BinaryData
 {
+    extern const char*   presets_png;
+    const int            presets_pngSize = 5680;
+
+    extern const char*   utils_png;
+    const int            utils_pngSize = 10204;
+
     extern const char*   gate_png;
     const int            gate_pngSize = 5666;
 
@@ -26,9 +32,6 @@ namespace BinaryData
     extern const char*   internet_png;
     const int            internet_pngSize = 5979;
 
-    extern const char*   list_png;
-    const int            list_pngSize = 2555;
-
     extern const char*   lock_png;
     const int            lock_pngSize = 3261;
 
@@ -36,7 +39,7 @@ namespace BinaryData
     const int            waveform_pngSize = 6991;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 9;
+    const int namedResourceListSize = 10;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

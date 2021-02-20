@@ -15,15 +15,15 @@
 //==============================================================================
 /*
 */
-class SamplerView  : public juce::Component
+class UtilitiesView  : public juce::Component
 {
 public:
-    SamplerView();
-    ~SamplerView() override;
+    UtilitiesView();
+    ~UtilitiesView() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SamplerView)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (UtilitiesView)
 };

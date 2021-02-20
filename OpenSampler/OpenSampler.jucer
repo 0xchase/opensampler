@@ -6,13 +6,14 @@
   <MAINGROUP id="OhkrRd" name="OpenSampler">
     <GROUP id="{60F98CA1-7E45-3C67-5D0F-FD37CDD006B8}" name="Source">
       <GROUP id="{D7839577-7AF0-E0ED-CCF6-9ED3CB256633}" name="images">
+        <FILE id="mZmZg3" name="presets.png" compile="0" resource="1" file="../images/presets.png"/>
+        <FILE id="a6bsj9" name="utils.png" compile="0" resource="1" file="../images/utils.png"/>
         <FILE id="JGLOEw" name="gate.png" compile="0" resource="1" file="../images/gate.png"/>
         <FILE id="mxiJIV" name="script.png" compile="0" resource="1" file="../images/script.png"/>
         <FILE id="wLZoJQ" name="midi.png" compile="0" resource="1" file="../images/midi.png"/>
         <FILE id="zn4tdE" name="files.png" compile="0" resource="1" file="../images/files.png"/>
         <FILE id="tVMdrS" name="piano.png" compile="0" resource="1" file="../images/piano.png"/>
         <FILE id="AZsibE" name="internet.png" compile="0" resource="1" file="../images/internet.png"/>
-        <FILE id="pmXHMu" name="list.png" compile="0" resource="1" file="../images/list.png"/>
         <FILE id="dK7D8u" name="lock.png" compile="0" resource="1" file="../images/lock.png"/>
         <FILE id="HSQgdH" name="waveform.png" compile="0" resource="1" file="../images/waveform.png"/>
       </GROUP>
@@ -23,12 +24,15 @@
         <FILE id="nXD7YX" name="BottomBar.h" compile="0" resource="0" file="Source/BottomBar.h"/>
       </GROUP>
       <GROUP id="{CFF17875-D81C-1098-0465-7108CAA6131C}" name="Tabs">
+        <FILE id="UDOoQq" name="BrowserView.cpp" compile="1" resource="0" file="Source/BrowserView.cpp"/>
+        <FILE id="kB5JSb" name="BrowserView.h" compile="0" resource="0" file="Source/BrowserView.h"/>
         <FILE id="ypw6DJ" name="MainView.cpp" compile="1" resource="0" file="Source/MainView.cpp"/>
         <FILE id="vBrfOj" name="MainView.h" compile="0" resource="0" file="Source/MainView.h"/>
         <FILE id="gIaDoV" name="ModularView.cpp" compile="1" resource="0" file="Source/ModularView.cpp"/>
         <FILE id="sBk6iY" name="ModularView.h" compile="0" resource="0" file="Source/ModularView.h"/>
-        <FILE id="NePXhL" name="SamplerView.cpp" compile="1" resource="0" file="Source/SamplerView.cpp"/>
-        <FILE id="dBtFwG" name="SamplerView.h" compile="0" resource="0" file="Source/SamplerView.h"/>
+        <FILE id="NePXhL" name="UtilitiesView.cpp" compile="1" resource="0"
+              file="Source/UtilitiesView.cpp"/>
+        <FILE id="dBtFwG" name="UtilitiesView.h" compile="0" resource="0" file="Source/UtilitiesView.h"/>
       </GROUP>
       <FILE id="aC3uUr" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

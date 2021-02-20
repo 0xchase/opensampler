@@ -28,15 +28,30 @@ public:
     
     void addTab();
     
+    ImageButton browserViewButton;
     ImageButton mainViewButton;
     ImageButton modularViewButton;
-    ImageButton samplerViewButton;
+    ImageButton utilitiesViewButton;
     
 private:
     
     int buttonHeight = 25;
     int buttonWidth = 60;
     int buttonPadding = 13;
+    
+    void initBrowserViewButton() {
+        browserViewButton.setButtonText("Main");
+        
+        Image normalButton = ImageCache::getFromMemory (BinaryData::presets_png, BinaryData::presets_pngSize);
+        Image overButton = ImageCache::getFromMemory (BinaryData::presets_png, BinaryData::presets_pngSize);
+        Image downButton = ImageCache::getFromMemory (BinaryData::presets_png, BinaryData::presets_pngSize);
+        
+        browserViewButton.setImages(false, true, true, normalButton, 0.5000f, Colour (0x00000000), overButton, 0.500f, Colour (0x00000000), downButton, 1.000f, Colour (0x00000000));
+        browserViewButton.setColour (0.5f, Colours::red.withAlpha (0.5f));
+        browserViewButton.setBounds(getWidth()/5*1, buttonPadding, buttonWidth, buttonHeight);
+        addAndMakeVisible(browserViewButton);
+    }
+
     
     void initMainViewButton() {
         mainViewButton.setButtonText("Main");
@@ -47,7 +62,7 @@ private:
         
         mainViewButton.setImages(false, true, true, normalButton, 0.5000f, Colour (0x00000000), overButton, 0.500f, Colour (0x00000000), downButton, 1.000f, Colour (0x00000000));
         mainViewButton.setColour (0.5f, Colours::red.withAlpha (0.5f));
-        mainViewButton.setBounds(getWidth()/4*1, buttonPadding, buttonWidth, buttonHeight);
+        mainViewButton.setBounds(getWidth()/5*2, buttonPadding, buttonWidth, buttonHeight);
         addAndMakeVisible(mainViewButton);
     }
     
@@ -60,21 +75,21 @@ private:
         
         modularViewButton.setImages(false, true, true, normalButton, 0.5000f, Colour (0x00000000), overButton, 0.500f, Colour (0x00000000), downButton, 1.000f, Colour (0x00000000));
         modularViewButton.setColour (0.5f, Colours::red.withAlpha (0.5f));
-        modularViewButton.setBounds(getWidth()/4*2, buttonPadding, buttonWidth, buttonHeight);
+        modularViewButton.setBounds(getWidth()/5*3, buttonPadding, buttonWidth, buttonHeight);
         addAndMakeVisible(modularViewButton);
     }
     
-    void initSamplerViewButton() {
-        samplerViewButton.setButtonText("Sampler");
+    void initUtilitiesViewButton() {
+        utilitiesViewButton.setButtonText("Utilities");
         
-        Image normalButton = ImageCache::getFromMemory (BinaryData::waveform_png, BinaryData::waveform_pngSize);
-        Image overButton = ImageCache::getFromMemory (BinaryData::waveform_png, BinaryData::waveform_pngSize);
-        Image downButton = ImageCache::getFromMemory (BinaryData::waveform_png, BinaryData::waveform_pngSize);
+        Image normalButton = ImageCache::getFromMemory (BinaryData::utils_png, BinaryData::utils_pngSize);
+        Image overButton = ImageCache::getFromMemory (BinaryData::utils_png, BinaryData::utils_pngSize);
+        Image downButton = ImageCache::getFromMemory (BinaryData::utils_png, BinaryData::utils_pngSize);
         
-        samplerViewButton.setImages(false, true, true, normalButton, 0.5000f, Colour (0x00000000), overButton, 0.500f, Colour (0x00000000), downButton, 1.000f, Colour (0x00000000));
-        samplerViewButton.setColour (0.5f, Colours::red.withAlpha (0.5f));
-        samplerViewButton.setBounds(getWidth()/4*3, buttonPadding, buttonWidth, buttonHeight);
-        addAndMakeVisible(samplerViewButton);
+        utilitiesViewButton.setImages(false, true, true, normalButton, 0.5000f, Colour (0x00000000), overButton, 0.500f, Colour (0x00000000), downButton, 1.000f, Colour (0x00000000));
+        utilitiesViewButton.setColour (0.5f, Colours::red.withAlpha (0.5f));
+        utilitiesViewButton.setBounds(getWidth()/5*4, buttonPadding, buttonWidth, buttonHeight);
+        addAndMakeVisible(utilitiesViewButton);
     }
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BottomBar)

@@ -23,6 +23,10 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     
     setSize (1200, 800); // Plugin window size
     
+    browserView.setBounds(5, 70, 1190, 665);
+    addAndMakeVisible(browserView);
+    browserView.setVisible(false);
+    
     mainView.setBounds(5, 70, 1190, 665);
     addAndMakeVisible(mainView);
     mainView.setVisible(true);
@@ -31,9 +35,9 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     addAndMakeVisible(modularView);
     modularView.setVisible(false);
     
-    samplerView.setBounds(5, 70, 1190, 665);
-    addAndMakeVisible(samplerView);
-    samplerView.setVisible(false);
+    utilitiesView.setBounds(5, 70, 1190, 665);
+    addAndMakeVisible(utilitiesView);
+    utilitiesView.setVisible(false);
     
     topBar.setBounds(5, 5, 1190, 60);
     addAndMakeVisible(topBar);
@@ -41,24 +45,28 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     bottomBar.setBounds(5, 740, 1190, 55);
     addAndMakeVisible(bottomBar);
     
+    bottomBar.browserViewButton.addListener(this);
     bottomBar.mainViewButton.addListener(this);
     bottomBar.modularViewButton.addListener(this);
-    bottomBar.samplerViewButton.addListener(this);
+    bottomBar.utilitiesViewButton.addListener(this);
     
 }
 
 void OpenSamplerAudioProcessorEditor::buttonClicked (juce::Button* button)
 {
+    browserView.setVisible(false);
     mainView.setVisible(false);
     modularView.setVisible(false);
-    samplerView.setVisible(false);
+    utilitiesView.setVisible(false);
     
-    if (button == &bottomBar.mainViewButton) {
+    if (button == &bottomBar.browserViewButton) {
+        browserView.setVisible(true);
+    } else if (button == &bottomBar.mainViewButton) {
         mainView.setVisible(true);
     } else if (button == &bottomBar.modularViewButton) {
         modularView.setVisible(true);
-    }else if (button == &bottomBar.samplerViewButton) {
-        samplerView.setVisible(true);
+    } else if (button == &bottomBar.utilitiesViewButton) {
+        utilitiesView.setVisible(true);
     }
 }
 
