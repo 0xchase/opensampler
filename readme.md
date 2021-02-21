@@ -6,7 +6,7 @@ An open source sampler plugin.
 
 ### User Interface
 
-The core of the user interface is 4 tabs, each described below.
+The core of the user interface is 4 tabs, selectable from the bottom bar, each described below.
 
  - **Browser view**: This view is for browsing and selecting instruments. The UI will look similar to the omnisphere preset browser. Like most samplers, the instruments may be loaded from local files. The browser will also function as a package manager, so the user can download new instruments from publically maintained repositories. 
 
