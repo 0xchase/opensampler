@@ -45,7 +45,7 @@ public:
     void buttonClicked (juce::Button* button) override;
 
 private:
-    juce::TextButton mLoadButton { "Load" };
+    juce::TextButton mLoadButton { "Load a sample (temporary)" };
     
     std::vector<juce::TextButton *> buttons;
     

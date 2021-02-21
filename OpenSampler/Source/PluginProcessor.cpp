@@ -101,6 +101,7 @@ void OpenSamplerAudioProcessor::prepareToPlay (double sampleRate, int samplesPer
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    
     mSampler.setCurrentPlaybackSampleRate(sampleRate);
 }
 
@@ -179,24 +180,30 @@ void OpenSamplerAudioProcessor::loadFile()
     if (chooser.browseForFileToOpen()) {
         auto file = chooser.getResult();
         mFormatReader = mFormatManager.createReaderFor(file);
+        
+        juce::BigInteger range;
+        range.setRange(0, 128, true);
+        
+        mSampler.addSound(new juce::SamplerSound ("Sample", *mFormatReader, range, 60, 0.1, 0.1, 10));
     }
-    
-    juce::BigInteger range;
-    range.setRange(0, 128, true);
-    
-    mSampler.addSound(new juce::SamplerSound ("Sample", *mFormatReader, range, 60, 0.1, 0.1, 10));
 }
 
 void OpenSamplerAudioProcessor::loadFile(const juce::String& path)
 {
-    mSampler.clearSounds();
+    //mSampler.clearSounds();
     
-    auto file = juce::File (path);
-    mFormatReader = mFormatManager.createReaderFor(file);
-    juce::BigInteger range;
-    range.setRange(0, 128, true);
-    
-    mSampler.addSound(new juce::SamplerSound ("Sample", *mFormatReader, range, 60, 0.1, 0.1, 10));
+    FileChooser chooser { "Please load a file" };
+    /*
+    if (false && chooser.browseForFileToOpen()) {
+        File file = chooser.getResult();
+        mFormatReader = mFormatManager.createReaderFor(file);
+        
+        BigInteger range;
+        range.setRange(0, 128, true);
+        
+        mSampler.addSound(new SamplerSound("Sample", *mFormatReader, range, 60, 0.1, 0.1, 10.0));
+    }
+     */
 }
 
 //==============================================================================

@@ -19,7 +19,8 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     mLoadButton.onClick = [&]() { audioProcessor.loadFile(); };
-    //addAndMakeVisible(mLoadButton);
+    mLoadButton.setBounds(browserView.getWidth()/2-100, browserView.getHeight()/2-100, 200, 200);
+    browserView.addAndMakeVisible(mLoadButton);
     
     setSize (1200, 800); // Plugin window size
     
