@@ -24,6 +24,10 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     
     setSize (1200, 800); // Plugin window size
     
+    makeKnob.onClick = [&]() {};
+    makeKnob.setBounds(browserView.getWidth()/2, browserView.getHeight()/2, 100, 100);
+    mainView.addAndMakeVisible(makeKnob);
+    
     browserView.setBounds(5, 70, 1190, 665);
     addAndMakeVisible(browserView);
     browserView.setVisible(false);

@@ -47,6 +47,8 @@ public:
 private:
     juce::TextButton mLoadButton { "Load a sample (temporary)" };
     
+    juce::TextButton makeKnob { "Make a knob (temporary)" };
+    
     std::vector<juce::TextButton *> buttons;
     
     // This reference is provided as a quick way for your editor to

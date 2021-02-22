@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="Kuv9Zt" name="OpenSampler" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              jucerVersion="5.4.5">
   <MAINGROUP id="OhkrRd" name="OpenSampler">
     <GROUP id="{60F98CA1-7E45-3C67-5D0F-FD37CDD006B8}" name="Source">
       <GROUP id="{D7839577-7AF0-E0ED-CCF6-9ED3CB256633}" name="images">
