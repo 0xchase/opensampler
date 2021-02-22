@@ -24,8 +24,8 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     
     setSize (1200, 800); // Plugin window size
     
-    makeKnob.onClick = [&]() {};
-    makeKnob.setBounds(browserView.getWidth()/2, browserView.getHeight()/2, 100, 100);
+    makeKnob.onClick = [&]() {createKnob(100, 100, 5, 5);};
+    makeKnob.setBounds(mainView.getWidth()/2, mainView.getHeight()/2, 100, 100);
     mainView.addAndMakeVisible(makeKnob);
     
     browserView.setBounds(5, 70, 1190, 665);
@@ -90,6 +90,15 @@ void OpenSamplerAudioProcessorEditor::createButton(int x, int y, int width, int 
     addAndMakeVisible(button);
     buttons.push_back(button);
     
+}
+
+void OpenSamplerAudioProcessorEditor::createKnob(int x, int y, int width, int height) {
+    
+    auto knob = new juce::Slider();
+    knob->setRange (0.0, 1.0);
+    knob->setSliderStyle (juce::Slider::RotaryVerticalDrag);
+    knob->setBounds (x, y, 180, 180);
+    addAndMakeVisible (knob);
 }
 
 OpenSamplerAudioProcessorEditor::~OpenSamplerAudioProcessorEditor()

@@ -42,6 +42,8 @@ public:
     
     void createButton(int x, int y, int width, int height);
     
+    void createKnob(int x, int y, int width, int height);
+    
     void buttonClicked (juce::Button* button) override;
 
 private:
