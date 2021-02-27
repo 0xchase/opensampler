@@ -19,26 +19,23 @@ ModularView::ModularView()
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
 
+    addAndMakeVisible(patchingView);
+    addAndMakeVisible(modulesListView);
+    
+    resized();
 }
 
 ModularView::~ModularView()
 {
+    /*
+    for (auto module : modules) {
+        delete module;
+    }
+     */
 }
 
 void ModularView::paint (juce::Graphics& g)
 {
-    /* This demo code just fills the component's background and
-       draws some placeholder text to get you started.
-
-       You should replace everything in this method with your own
-       drawing code..
-    */
-
-    const Rectangle<int32> area(0, 0, getWidth(), getHeight());
-    const Rectangle<float> areaFix = area.toFloat();
-    g.setColour(juce::Colour::fromRGB(54, 54, 54));
-    g.fillRoundedRectangle(areaFix, 15.0f);
-    
     g.setColour (juce::Colours::white);
     g.setFont (14.0f);
     g.drawText ("Modular View", getLocalBounds(), juce::Justification::centred, true);
@@ -46,7 +43,8 @@ void ModularView::paint (juce::Graphics& g)
 
 void ModularView::resized()
 {
-    // This method is where you should set the bounds of any child
-    // components that your component contains..
+    patchingView.setBounds(0, 0, getWidth()-50-120, getHeight());
+    modulesListView.setBounds(getWidth()-65-100, 0, 165, getHeight());
+
 
 }

@@ -2,37 +2,82 @@
 
 <JUCERPROJECT id="Kuv9Zt" name="OpenSampler" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              headerPath="/Users/chasekanipe/Files/opensampler/faust/architecture/">
   <MAINGROUP id="OhkrRd" name="OpenSampler">
     <GROUP id="{60F98CA1-7E45-3C67-5D0F-FD37CDD006B8}" name="Source">
-      <GROUP id="{D7839577-7AF0-E0ED-CCF6-9ED3CB256633}" name="images">
-        <FILE id="mZmZg3" name="presets.png" compile="0" resource="1" file="../images/presets.png"/>
-        <FILE id="a6bsj9" name="utils.png" compile="0" resource="1" file="../images/utils.png"/>
-        <FILE id="JGLOEw" name="gate.png" compile="0" resource="1" file="../images/gate.png"/>
-        <FILE id="mxiJIV" name="script.png" compile="0" resource="1" file="../images/script.png"/>
-        <FILE id="wLZoJQ" name="midi.png" compile="0" resource="1" file="../images/midi.png"/>
-        <FILE id="zn4tdE" name="files.png" compile="0" resource="1" file="../images/files.png"/>
-        <FILE id="tVMdrS" name="piano.png" compile="0" resource="1" file="../images/piano.png"/>
-        <FILE id="AZsibE" name="internet.png" compile="0" resource="1" file="../images/internet.png"/>
-        <FILE id="dK7D8u" name="lock.png" compile="0" resource="1" file="../images/lock.png"/>
-        <FILE id="HSQgdH" name="waveform.png" compile="0" resource="1" file="../images/waveform.png"/>
+      <GROUP id="{32164853-FFD5-712D-6243-6C60927BD542}" name="Views">
+        <GROUP id="{43477A1D-FA4D-D1A6-0A33-B86DFE977AA7}" name="BrowserView">
+          <FILE id="UDOoQq" name="BrowserView.cpp" compile="1" resource="0" file="Source/BrowserView.cpp"/>
+          <FILE id="kB5JSb" name="BrowserView.h" compile="0" resource="0" file="Source/BrowserView.h"/>
+        </GROUP>
+        <GROUP id="{86450BCF-A850-071A-FA55-50893E5C85B7}" name="MainView">
+          <FILE id="ypw6DJ" name="MainView.cpp" compile="1" resource="0" file="Source/MainView.cpp"/>
+          <FILE id="vBrfOj" name="MainView.h" compile="0" resource="0" file="Source/MainView.h"/>
+        </GROUP>
+        <GROUP id="{63C76BFE-799D-F043-5717-4B008B8CE935}" name="ModularView">
+          <GROUP id="{0FEE08F6-03B2-5986-6A72-903126D93A1E}" name="ModuleDraggable">
+            <FILE id="mBSQie" name="ModuleDraggable.cpp" compile="1" resource="0"
+                  file="Source/ModuleDraggable.cpp"/>
+            <FILE id="LBckJ9" name="ModuleDraggable.h" compile="0" resource="0"
+                  file="Source/ModuleDraggable.h"/>
+          </GROUP>
+          <GROUP id="{8258CCC4-454D-698A-AD13-3A5D9299793B}" name="SubViews">
+            <FILE id="zB6pbt" name="PatchingView.cpp" compile="1" resource="0"
+                  file="Source/PatchingView.cpp"/>
+            <FILE id="MeDkqU" name="PatchingView.h" compile="0" resource="0" file="Source/PatchingView.h"/>
+            <FILE id="KZGNHi" name="ModulesListView.cpp" compile="1" resource="0"
+                  file="Source/ModulesListView.cpp"/>
+            <FILE id="R7qAkZ" name="ModulesListView.h" compile="0" resource="0"
+                  file="Source/ModulesListView.h"/>
+          </GROUP>
+          <FILE id="gIaDoV" name="ModularView.cpp" compile="1" resource="0" file="Source/ModularView.cpp"/>
+          <FILE id="sBk6iY" name="ModularView.h" compile="0" resource="0" file="Source/ModularView.h"/>
+        </GROUP>
+        <GROUP id="{CFF17875-D81C-1098-0465-7108CAA6131C}" name="UtilitiesView">
+          <FILE id="NePXhL" name="UtilitiesView.cpp" compile="1" resource="0"
+                file="Source/UtilitiesView.cpp"/>
+          <FILE id="dBtFwG" name="UtilitiesView.h" compile="0" resource="0" file="Source/UtilitiesView.h"/>
+        </GROUP>
+        <GROUP id="{DCEE456E-62CD-26D3-BD1B-4EDD11F499AD}" name="Bars">
+          <FILE id="za7FeH" name="TopBar.cpp" compile="1" resource="0" file="Source/TopBar.cpp"/>
+          <FILE id="RPHTEg" name="TopBar.h" compile="0" resource="0" file="Source/TopBar.h"/>
+          <FILE id="wKMXDC" name="BottomBar.cpp" compile="1" resource="0" file="Source/BottomBar.cpp"/>
+          <FILE id="nXD7YX" name="BottomBar.h" compile="0" resource="0" file="Source/BottomBar.h"/>
+        </GROUP>
       </GROUP>
-      <GROUP id="{DCEE456E-62CD-26D3-BD1B-4EDD11F499AD}" name="Bars">
-        <FILE id="za7FeH" name="TopBar.cpp" compile="1" resource="0" file="Source/TopBar.cpp"/>
-        <FILE id="RPHTEg" name="TopBar.h" compile="0" resource="0" file="Source/TopBar.h"/>
-        <FILE id="wKMXDC" name="BottomBar.cpp" compile="1" resource="0" file="Source/BottomBar.cpp"/>
-        <FILE id="nXD7YX" name="BottomBar.h" compile="0" resource="0" file="Source/BottomBar.h"/>
+      <GROUP id="{8AC63FD3-079B-71F4-7166-2912494DC312}" name="Modules">
+        <FILE id="snTrJj" name="Module.h" compile="0" resource="0" file="Source/Module.h"/>
+        <GROUP id="{B1CB84C3-0E99-1C8E-7AEE-9E238EC36DD3}" name="AudioSources">
+          <FILE id="tSk634" name="TestAudioSource.cpp" compile="1" resource="0"
+                file="Source/TestAudioSource.cpp"/>
+        </GROUP>
+        <GROUP id="{6B2921DC-C262-4C27-176A-8E4E949740C4}" name="AudioEffects">
+          <FILE id="xWZffg" name="TestAudioEffect.cpp" compile="1" resource="0"
+                file="Source/TestAudioEffect.cpp"/>
+        </GROUP>
+        <GROUP id="{FC8E30FA-071A-80E2-875E-637F6B88CAAA}" name="MidiSources">
+          <FILE id="vs9pIr" name="TestMidiSource.cpp" compile="1" resource="0"
+                file="Source/TestMidiSource.cpp"/>
+        </GROUP>
+        <GROUP id="{840A766D-CA17-A2FF-06FC-6448554D9916}" name="MidiEffects">
+          <FILE id="vVEVvh" name="TestMidiEffect.cpp" compile="1" resource="0"
+                file="Source/TestMidiEffect.cpp"/>
+        </GROUP>
       </GROUP>
-      <GROUP id="{CFF17875-D81C-1098-0465-7108CAA6131C}" name="Tabs">
-        <FILE id="UDOoQq" name="BrowserView.cpp" compile="1" resource="0" file="Source/BrowserView.cpp"/>
-        <FILE id="kB5JSb" name="BrowserView.h" compile="0" resource="0" file="Source/BrowserView.h"/>
-        <FILE id="ypw6DJ" name="MainView.cpp" compile="1" resource="0" file="Source/MainView.cpp"/>
-        <FILE id="vBrfOj" name="MainView.h" compile="0" resource="0" file="Source/MainView.h"/>
-        <FILE id="gIaDoV" name="ModularView.cpp" compile="1" resource="0" file="Source/ModularView.cpp"/>
-        <FILE id="sBk6iY" name="ModularView.h" compile="0" resource="0" file="Source/ModularView.h"/>
-        <FILE id="NePXhL" name="UtilitiesView.cpp" compile="1" resource="0"
-              file="Source/UtilitiesView.cpp"/>
-        <FILE id="dBtFwG" name="UtilitiesView.h" compile="0" resource="0" file="Source/UtilitiesView.h"/>
+      <GROUP id="{2A74D1DC-5B40-A415-00E1-A74B5366E026}" name="Resources">
+        <GROUP id="{D7839577-7AF0-E0ED-CCF6-9ED3CB256633}" name="images">
+          <FILE id="mZmZg3" name="presets.png" compile="0" resource="1" file="../images/presets.png"/>
+          <FILE id="a6bsj9" name="utils.png" compile="0" resource="1" file="../images/utils.png"/>
+          <FILE id="JGLOEw" name="gate.png" compile="0" resource="1" file="../images/gate.png"/>
+          <FILE id="mxiJIV" name="script.png" compile="0" resource="1" file="../images/script.png"/>
+          <FILE id="wLZoJQ" name="midi.png" compile="0" resource="1" file="../images/midi.png"/>
+          <FILE id="zn4tdE" name="files.png" compile="0" resource="1" file="../images/files.png"/>
+          <FILE id="tVMdrS" name="piano.png" compile="0" resource="1" file="../images/piano.png"/>
+          <FILE id="AZsibE" name="internet.png" compile="0" resource="1" file="../images/internet.png"/>
+          <FILE id="dK7D8u" name="lock.png" compile="0" resource="1" file="../images/lock.png"/>
+          <FILE id="HSQgdH" name="waveform.png" compile="0" resource="1" file="../images/waveform.png"/>
+        </GROUP>
       </GROUP>
       <FILE id="aC3uUr" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>

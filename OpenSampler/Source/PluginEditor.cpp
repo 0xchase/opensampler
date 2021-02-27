@@ -51,6 +51,10 @@ OpenSamplerAudioProcessorEditor::OpenSamplerAudioProcessorEditor (OpenSamplerAud
     bottomBar.modularViewButton.addListener(this);
     bottomBar.utilitiesViewButton.addListener(this);
     
+    setResizable(true, true);
+    
+    puts("Initialized plugin view");
+    
 }
 
 void OpenSamplerAudioProcessorEditor::buttonClicked (juce::Button* button)
